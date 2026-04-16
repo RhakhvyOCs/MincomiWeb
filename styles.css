@@ -1,0 +1,9 @@
+/* Simple styles for the test site */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:#f7f8fb;color:#222;display:flex;flex-direction:column;min-height:100vh}
+header{background:linear-gradient(90deg,#06b6d4,#7c3aed);color:#fff;padding:2rem;text-align:center}
+main{flex:1;max-width:800px;margin:2rem auto;padding:1rem}
+section{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:1rem}
+button{background:#7c3aed;color:#fff;border:0;padding:.6rem 1rem;border-radius:6px;cursor:pointer}
+input{padding:.4rem;margin:.4rem 0;border:1px solid #ddd;border-radius:4px;width:100%;max-width:300px}
+footer{text-align:center;padding:1rem;color:#666;font-size:.9rem}

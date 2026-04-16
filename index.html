@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mincomi Test Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mincomi Test Site</h1>
+    <p>Simple static site to verify hosting.</p>
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>This minimal site helps confirm your upload works.</p>
+      <button id="demo-btn">Click me</button>
+      <p id="click-result"></p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label>Name: <input type="text" id="name" required></label><br>
+        <label>Email: <input type="email" id="email" required></label><br>
+        <button type="submit">Send</button>
+      </form>
+      <p id="message"></p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Mincomi Test</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
