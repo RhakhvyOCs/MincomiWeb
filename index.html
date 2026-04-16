@@ -3,38 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mincomi Test Site</title>
+  <title>Mincomi Arts</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Mincomi Test Site</h1>
-    <p>Simple static site to verify hosting.</p>
-    <nav>
-      <a href="#about">About</a> |
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <h1>Mincomi Arts</h1>
+      <p class="tagline">A small, supportive community for digital creators — OCs, stories, games, and more.</p>
+      <nav class="main-nav">
+        <a href="#" data-nav="home">Home</a>
+        <a href="#" data-nav="creators">Creators</a>
+        <a href="#" data-nav="create">Create Profile</a>
+        <a href="#" data-nav="about">About</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>This minimal site helps confirm your upload works.</p>
-      <button id="demo-btn">Click me</button>
-      <p id="click-result"></p>
+
+  <main class="container">
+    <section id="home" class="panel active">
+      <h2>Welcome</h2>
+      <p>Mincomi Arts showcases creations from the Mincomi members and supports small creators and their stories.</p>
+      <div class="featured" id="featured-area"></div>
     </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <form id="contact-form">
-        <label>Name: <input type="text" id="name" required></label><br>
-        <label>Email: <input type="email" id="email" required></label><br>
-        <button type="submit">Send</button>
+
+    <section id="creators" class="panel">
+      <h2>Creators</h2>
+      <div id="creators-list"></div>
+    </section>
+
+    <section id="create" class="panel">
+      <h2>Create Profile</h2>
+      <p>To register as a creator you need a unique creator key. Contact an admin for your key.</p>
+      <form id="create-form">
+        <label>Creator Key
+          <input type="password" id="creator-key" placeholder="Enter your creator key" required>
+        </label>
+        <label>Username
+          <input type="text" id="creator-username" placeholder="username" required>
+        </label>
+        <label>Display name
+          <input type="text" id="creator-display" placeholder="How you want to be seen">
+        </label>
+        <label>Bio
+          <textarea id="creator-bio" rows="3" placeholder="Short bio"></textarea>
+        </label>
+        <label>Theme
+          <select id="creator-theme">
+            <option value="default">Default</option>
+            <option value="dark">Dark</option>
+            <option value="pastel">Pastel</option>
+          </select>
+        </label>
+        <button type="submit">Create Profile</button>
       </form>
-      <p id="message"></p>
+      <p id="create-result" class="muted"></p>
+
+      <details id="admin-keys">
+        <summary>Admin: show encrypted creator keys</summary>
+        <pre id="encrypted-keys" class="muted">Loading keys…</pre>
+      </details>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About Mincomi Arts</h2>
+      <p>Mincomi Arts is a group of digital artists who create and share original characters, stories, and games. The site focuses on member creations and profiles. Currently two confirmed Mincomi members exist.</p>
     </section>
   </main>
+
   <footer>
-    <p>© 2026 Mincomi Arts</p>
+    <div class="container">
+      <p>© Mincomi Arts 2026</p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
